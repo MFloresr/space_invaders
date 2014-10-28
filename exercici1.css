@@ -1,0 +1,9 @@
+#container {
+  width:300 ;
+  margin: absolute;
+}
+
+canvas {
+  border: 1px solid black;
+  
+}

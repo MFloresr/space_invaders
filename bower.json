@@ -1,0 +1,22 @@
+{
+  "name": "dawm06uf1a2-2",
+  "version": "0.0.1",
+  "authors": [
+    "xavigimenezsanchez <javiergimenezsanchez@gmail.com>"
+  ],
+  "description": "Exercicis de javascript sobre objectes",
+  "license": "MIT",
+  "homepage": "www.xavigimenez.cat",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.1",
+    "modernizer": "~2.8.2"
+  }
+}
