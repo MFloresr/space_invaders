@@ -7,7 +7,7 @@
   img.src = 'http://darkorbit-22.level3.bpcdn.net/do_img/global/pilotSheet/externalPPP/icons/ship_designs_190x210/ship_goliath_design_diminisher_top.png';
   var canvasx = 900;
   var canvasy = 600;
-
+  var navesenemigas = [];
   var nave = {
     balas: [],
     image: img,
@@ -31,29 +31,31 @@
     this.img.src ='http://www.aeromodelismovirtual.com/images/statusicon/user_online.png';
     this.x = x+41;
     this.y = y-19;
-    this.move=function(){
-      this.y -= 5;
+    this.move = function () {
+        this.y -= 5;
     }
 
   }
 
-  function navenemiga(x,y){
-  	this.img = new Image();
-    this.img.src ='http://www.mtryx.net/GalaxyWars/images/scarab.png';
-    this.x = 0;
-    this.y = 0;
-    this.move=function(){
-      this.x += 5;
-    }
+  function navenemiga(x, y) {
+      this.img = new Image();
+      this.img.src ='http://www.mtryx.net/GalaxyWars/images/scarab.png';
+      this.x = 0;
+      this.y = 0;
+      this.move = function () {
+          this.x += 5;
+      };
+      this.size = {
+          x : 50,
+          y : 50
+      }
+
   }
-
-  
-    function crearnavenemiga(){
-  	  naves.push(new navenemiga(navenemiga.x,navenemiga.y));
+ 
+    function crearnave() {
+        navesenemigas.push(new navenemiga()) //aqui te quedaste creando naves enemigas
     }
-
-
-  
+    
   function canvasApp() {
     return true //Modernizr.canvas;
   }
@@ -72,12 +74,6 @@
           context.drawImage(e.img,e.x,e.y)//aqui falta codigos
           e.move();
       })
-
-      navenemiga.forEach(function(e){
-      	context.drawImage(e.img,e.x,e.y)
-      	e.move();
-  	  })
-
 
     }
 
