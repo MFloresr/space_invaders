@@ -42,10 +42,10 @@
         this.img.src ='http://www.mtryx.net/GalaxyWars/images/scarab.png';
         this.position = {
             x : x,
-            y : y
+            y : y,
         },
         this.move = function () {
-            this.x += 5;
+            this.position.x += 5;
         };
         this.size = {
             x : 20,
